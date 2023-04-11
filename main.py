@@ -4,7 +4,7 @@ import textwrap
 
 
 def main(rpc_url: str, contract_address: str, contract_file: str):
-    w3 = web3.Web3(web3.HTTPProvider('http://localhost:8545'))
+    w3 = web3.Web3(web3.HTTPProvider(rpc_url))
     checksum_address = w3.toChecksumAddress(contract_address)
 
     # get latest block number
